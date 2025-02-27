@@ -1,0 +1,14 @@
+@charset 'UTF-8';
+
+@import 'reset';
+@import 'variables';
+// @import 'fonts';
+@import 'mixins';
+@import 'core';
+
+
+@import './Blocks/intro.scss';
+@import './Blocks/features.scss';
+@import './Blocks/roadmap.scss';
+@import './Blocks/pricingPlans.scss';
+@import './Blocks/footer.scss';

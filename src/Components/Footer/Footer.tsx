@@ -1,0 +1,52 @@
+import Logo from "../../assets/icons/logo-gray.svg";
+import facebook from "../../assets/icons/Facebook.svg";
+import twitter from "../../assets/icons/Twitter.svg";
+import instagram from "../../assets/icons/Instagram.svg";
+
+export const Footer = () => {
+    return (
+        <footer className="footer-menu wrap-padding">
+      <div className="footer-menu_wrapper wrap">
+        <div className="footer-menu_logo">
+          <img src={Logo} alt="footer logo" />
+          <p>ANALYTICS</p>
+        </div>
+        <ul className="footer-menu_list">
+          <li className="footer-menu_item">
+            <a href="" className="footer-menu_link">Product</a>
+          </li>
+          <li className="footer-menu_item">
+            <a href="" className="footer-menu_link">Pricing Plans</a>
+          </li>
+          <li className="footer-menu_item">
+            <a href="" className="footer-menu_link">FAQ</a>
+          </li>
+          <li className="footer-menu_item">
+            <a href="" className="footer-menu_link">Blog</a>
+          </li>
+        </ul>
+        <div className="footer-menu_links">
+          <a href="/">
+            <img
+              className="footer-menu_link-icon"
+              width="10"
+              height="20"
+              src={facebook}
+              alt="facebook" />
+          </a>
+          <a href="/">
+            <img className="footer-menu_link-icon" width="25" height="20" src={twitter} alt="twitter" />
+          </a>
+          <a href="/">
+            <img
+              className="footer-menu_link-icon"
+              width="21"
+              height="20"
+              src={instagram}
+              alt="instagram" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    )
+}

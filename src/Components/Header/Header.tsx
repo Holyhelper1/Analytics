@@ -1,4 +1,3 @@
-import React from 'react';
 import Logo from "../../assets/icons/Logo.svg";
 import dashboard from "../../assets/img/dashboard-small.png";
 export const Header = () => {

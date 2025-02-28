@@ -164,6 +164,7 @@ body {
 }
 .header_menu-item a {
   text-decoration: none;
+  cursor: pointer;
 }
 .header_menu :hover {
   color: #EF2A82;
@@ -560,6 +561,7 @@ body {
   background: #0f1f4b;
   padding: 50px 66px 70px;
   text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 .pricing-plans_rates .rates-item_title {
   font-weight: 700;
@@ -718,6 +720,9 @@ body {
   text-transform: uppercase;
   font-size: 20px;
 }
+.footer-menu a {
+  cursor: pointer;
+}
 .footer-menu_list {
   width: 294px;
   display: flex;
@@ -726,6 +731,13 @@ body {
 }
 .footer-menu_link {
   text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+.footer-menu_link:hover {
+  font-size: 18px;
+  color: #EF2A82;
 }
 .footer-menu_links {
   display: flex;

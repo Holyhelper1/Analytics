@@ -3,7 +3,7 @@ import performance from "../../assets/icons/performance.svg";
 import widgetSystem from "../../assets/icons/widgetSystem.svg";
 export const MainFeatures = () => {
   return (
-    <div className="main-features">
+    <div className="main-features" id="blog">
       <div className="wrap">
         <h2 className="main-features_title">Main features</h2>
         <p className="main-features_text-block">
@@ -19,7 +19,7 @@ export const MainFeatures = () => {
               alt="monitoring"
               className="main-features_advantage-icon"
             />
-            <h3 className="main-features_advantage_title">Monitoring 24/7</h3>
+            <h3 className="main-features_advantage_title" id="blog">Monitoring 24/7</h3>
             <p className="main-features_advantage-desc">
               Lorem ipsum dolor sit amet, consectetur adipis cing elit.
               Elementum nisi aliquet volutpat.

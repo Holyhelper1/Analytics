@@ -1,6 +1,6 @@
 export const PricingPlans = () => {
   return (
-    <div className="pricing-plans">
+    <div className="pricing-plans" id="pricing-plans">
       <div className="wrap wrap-padding">
         <div className="pricing-plans_description">
           <h3 className="pricing-plans_title">Pricing Plans</h3>

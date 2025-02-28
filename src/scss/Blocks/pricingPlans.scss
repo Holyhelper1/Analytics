@@ -3,8 +3,6 @@
   padding-top: 280px;
   padding-bottom: 100px;
 
-  
-
   &::after {
     content: "";
     position: absolute;
@@ -54,7 +52,6 @@
   }
 }
 
-
 .pricing-plans_rates {
   display: flex;
   justify-content: space-between;
@@ -65,6 +62,7 @@
     background: #0f1f4b;
     padding: 50px 66px 70px;
     text-align: center;
+    transition: all 0.3s ease-in-out;
 
     &_title {
       font-weight: 700;
@@ -84,12 +82,12 @@
       margin-bottom: 66px;
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         width: 220px;
         height: 0.5px;
         background: #2a407c;
-        opacity:  0.6;
+        opacity: 0.6;
         top: 220%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -109,126 +107,106 @@
     }
 
     &_subtitle {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 40%;
-        text-align: center;
-        color: $gray;
-        margin-bottom: 40px;
-      }
-  
-      &_order-btn {
-        @include btn(#2a407c, transparent, 68px, #fff, 16px, 15px, 80px);
-      }
-  
-      // &--pink {
-      //   box-shadow: 0 18px 50px -15px #060f28;
-      //   background: #fff;
-  
-      //   .rates-item_title,
-      //   .rates-item_price {
-      //     color: #172755;
-      //   }
-  
-      //   .rates-item_order-btn {
-      //     @include btn($pink, $pink, 68px, #fff, 16px, 15px, 80px);
-      //     transition: all 0.5s;
-  
-      //     &:hover {
-      //       @include btn($pink, transparent, 68px, $pink, 16px, 15px, 80px);
-      //     }
-      //   }
-      // }
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 40%;
+      text-align: center;
+      color: $gray;
+      margin-bottom: 40px;
     }
 
-    :hover{
-      box-shadow: 0 18px 50px -15px #060f28;
-      background: #fff;
-  
-      .rates-item_title,
-      .rates-item_price {
-        color: #172755;
-      }
-  
-      .rates-item_order-btn {
-        @include btn($pink, $pink, 68px, #fff, 16px, 15px, 80px);
-        transition: all 0.5s;
-  
-        &:hover {
-          @include btn($pink, transparent, 68px, $pink, 16px, 15px, 80px);
-        }
-      }
-       p{
-        box-shadow: none;
-       }
-       h4 {
-        box-shadow: none;
-       }
+    &_order-btn {
+      @include btn(#2a407c, transparent, 68px, #fff, 16px, 15px, 80px);
     }
   }
-  
-  @media screen and (max-width: 1200px) {
-    .pricing-plans {
-      padding-top: 150px;
-  
-      &::after,
-      &::before {
-        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-      }
-  
-      &_rates {
-        justify-content: space-evenly;
-        flex-flow: row wrap;
-        gap: 35px;
+
+  :hover {
+    box-shadow: 0 18px 50px -15px #060f28;
+    background: #fff;
+
+    .rates-item_title,
+    .rates-item_price {
+      color: #172755;
+    }
+
+    .rates-item_order-btn {
+      @include btn($pink, $pink, 68px, #fff, 16px, 15px, 80px);
+      transition: all 0.5s;
+
+      &:hover {
+        @include btn($pink, transparent, 68px, $pink, 16px, 15px, 80px);
       }
     }
+    p {
+      box-shadow: none;
+    }
+    h4 {
+      box-shadow: none;
+    }
   }
-  
-  @media screen and (max-width: 768px) {
-    .pricing-plans {
-      padding-top: 150px;
-  
-      &::after,
-      &::before {
-        clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
-      }
-  
+}
+
+@media screen and (max-width: 1200px) {
+  .pricing-plans {
+    padding-top: 150px;
+
+    &::after,
+    &::before {
+      clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    &_rates {
+      justify-content: space-evenly;
+      flex-flow: row wrap;
+      gap: 35px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pricing-plans {
+    padding-top: 150px;
+
+    &::after,
+    &::before {
+      clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    &_title {
+      font-size: 32px;
+    }
+
+    &_text-block {
+      font-size: 16px;
+    }
+
+    .rates-item {
+      padding: 30px 56px 50px;
+
       &_title {
-        font-size: 32px;
+        font-size: 24px;
       }
-  
+
       &_text-block {
         font-size: 16px;
       }
-  
-      .rates-item {
-        padding: 30px 56px 50px;
-  
-        &_title {
-          font-size: 24px;
-        }
-  
-        &_text-block {
-          font-size: 16px;
-        }
-  
-        &_price {
-          font-size: 50px;
-        }
-      }
-    }
-  }
-  
-  @media screen and (max-width: 400px) {
-    .pricing-plans {
-      &::after,
-      &::before {
-        clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
-      }
-  
-      .rates-item {
-        padding: 30px 36px 30px;
-      }
-    }
-  }
 
+      &_price {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .pricing-plans {
+    &::after,
+    &::before {
+      clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .rates-item {
+      padding: 30px 36px 30px;
+    }
+  }
+}

@@ -1,27 +1,34 @@
+import React from 'react';
 import Logo from "../../assets/icons/Logo.svg";
 import dashboard from "../../assets/img/dashboard-small.png";
 export const Header = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <div className="intro-analytics">
       <div className="wrap wrap_padding">
         <header className="header">
-          <a href="" className="header_logo">
+          <a href="#" className="header_logo">
             <img src={Logo} alt="Logo" />
             <p>Analytics</p>
           </a>
           <nav className="header_menu header_menu--adaptive">
             <ul className="header_menu-list">
               <li className="header_menu-item">
-                <a href="#">Products</a>
+                <a onClick={() => scrollToSection('products')}>Products</a>
               </li>
               <li className="header_menu-item">
-                <a href="#">Pricing</a>
+                <a  onClick={() => scrollToSection('pricing-plans')}>Pricing</a>
               </li>
               <li className="header_menu-item">
-                <a href="#">FAQ</a>
+                <a  onClick={() => scrollToSection('FAQ')}>FAQ</a>
               </li>
               <li className="header_menu-item">
-                <a href="#">Blog</a>
+                <a onClick={() => scrollToSection('blog')}>Blog</a>
               </li>
               <li className="header_menu-item">
                 <a href="#">Analytics</a>
@@ -37,16 +44,16 @@ export const Header = () => {
             <nav className="header_menu header_menu--side">
               <ul className="header_menu-list">
                 <li className="header_menu-item">
-                  <a href="/">Products</a>
+                  <a onClick={() => scrollToSection('products')}>Products</a>
                 </li>
                 <li className="header_menu-item">
-                  <a href="/">Pricing</a>
+                  <a onClick={() => scrollToSection('pricing-plans')}>Pricing</a>
                 </li>
                 <li className="header_menu-item">
-                  <a href="/">FAQ</a>
+                  <a onClick={() => scrollToSection('FAQ')}>FAQ</a>
                 </li>
                 <li className="header_menu-item">
-                  <a href="/">Blog</a>
+                  <a onClick={() => scrollToSection('blog')}>Blog</a>
                 </li>
                 <li className="header_menu-item">
                   <a href="/">Analytics</a>
